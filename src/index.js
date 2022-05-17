@@ -1,2 +1,1 @@
-const myarray = ["Jaipur","Kampala","Paris"];
-console.log(myarray);
+console.log("Naki's Finder");

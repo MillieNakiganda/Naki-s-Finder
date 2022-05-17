@@ -1,12 +1,11 @@
 {
-  "name": "01",
+  "name": "naki-s-finder",
   "version": "1.0.0",
-  "description": "",
+  "description": "An client app for searching for US cities by city or state",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve",
-    "build": "NODE_ENV='development' webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack serve --port 4000",
+    "build": "NODE_ENV='development' webpack"
   },
   "keywords": [],
   "author": "",
