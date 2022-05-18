@@ -1,7 +1,7 @@
 {
   "name": "naki-s-finder",
   "version": "1.0.0",
-  "description": "An client app for searching for US cities by city or state",
+  "description": "A client app for searching US cities by city or state",
   "main": "index.js",
   "scripts": {
     "start:dev": "webpack serve --config webpack.config.dev.js",
