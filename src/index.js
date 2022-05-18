@@ -1,2 +1,5 @@
-// eslint-disable-next-line no-console
-console.log("Naki's Finder............");
+// stylesheet
+import "./css/index.css";
+
+// Js files
+import "./js/search";
