@@ -1,5 +1,5 @@
 // stylesheet
-import "./css/index.css";
+import './css/index.css';
 
 // Js files
-import "./js/search";
+import './js/search';

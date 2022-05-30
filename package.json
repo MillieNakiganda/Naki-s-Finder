@@ -17,13 +17,11 @@
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
-    "eslint": "^8.16.0",
-    "eslint-config-airbnb": "^19.0.4",
+    "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-loader": "^4.0.2",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-import": "^2.24.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-react-hooks": "^4.5.0",
@@ -47,12 +45,9 @@
       "pre-commit": "lint-staged"
     }
   },
-  "lint-staged": {
-    "*.{js,jsx}": [
-      "eslint"
-    ],
-    "*.{js,jsx,json,md}": [
-      "prettier --list-different"
-    ]
+  "rules": {
+    "linebreak-style": ["error", "windows"]
+
   }
+  
 }
