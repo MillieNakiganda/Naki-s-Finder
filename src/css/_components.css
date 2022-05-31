@@ -1,3 +1,18 @@
-h1 {
-  font-size: 4rem;
+input[value="New"]{
+  font: 1vw;
+  font-weight: bold;
+  
 }
+
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+  font-style: normal;
+  font-family: Inter;
+  width: 328px;
+  height: 80px;
+}
+

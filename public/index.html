@@ -1,32 +1,57 @@
 <!DOCTYPE html>
 <html>
   <head>
+    
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Naki's Finder</title>
   </head>
-  <body>
+  <body style="padding: 20px; margin: 10px ;">
     <main>
-      <h1>
-        <strong><i>Naki's Finder</i></strong>
+      <h1
+        style="font-family: Courgette; font-size: 32px; width: 200px; text-decoration-line: underline; text-decoration-color: yellow"
+      >
+        <i>Naki's Finder<i>
       </h1>
       <form>
-        <input type="text" style="width: 70vw" value="New" /><br /><br />
+        <input type="text" id="text-to-search" style="box-sizing: border-box; width: 94vw;border: 2px solid black; padding: 5px;" value="New" /><br /><br />
         <input
           type="submit"
-          style="background-color: black; color: white; border-radius: 10"
-          value="Clear Search"
+          style="
+            background-color: black;
+            color: white;
+            border-radius: 10;
+            padding: 8px;
+            width: 200px;
+            font-size: medium;
+          "
+          value="Clear search"
         />
       </form>
-
+      
+      
+<div style="overflow-x:auto;"">
       <table>
         <thead>
-          <th>City</th>
-          <th>State</th>
-          <th>Population</th>
-          <th>Growth</th>
+          <th scope="col">City</th>
+          <th scope="col">State</th>
+          <th scope="col">Population</th>
+          <th scope="col">Growth</th>
         </thead>
+        <tr>
+          <td> NewYork</td>
+          <td> Brooklyn</td>
+          <td> 2 million</td>
+          <td> 2%</td>
+        </tr>
+        <tr>
+          <td> NewYork</td>
+          <td> Brooklyn</td>
+          <td> 2 million</td>
+          <td> 2%</td>
+        </tr>
       </table>
+      </div>
     </main>
   </body>
 </html>
