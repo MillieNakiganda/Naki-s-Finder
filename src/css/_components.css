@@ -1,3 +1,13 @@
+.main-container{
+  display: grid; 
+  grid-template-columns: 2% min(85ch, calc(100% - 64px)) 1fr;
+  grid-column-gap: 32px
+}
+
+.main-container > * {
+  grid-column: 2;
+}
+
 input[value="New"]{
   font: 1vw;
   font-weight: bold;
@@ -15,4 +25,25 @@ th, td {
   width: 328px;
   height: 80px;
 }
+
+#logo-header, h1 > i{
+  font-family: Courgette; 
+  font-size: 32px;
+  width: 200px;
+  text-decoration-line: underline; 
+  text-decoration-color: yellow
+}
+
+.search{
+  width: 100%; 
+  border: 2px solid black;
+}
+
+.search-button{
+  background-color: black;
+  color: white;
+  border-radius: 10;
+  font-size: medium;
+}
+
 

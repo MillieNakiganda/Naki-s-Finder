@@ -1,36 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Naki's Finder</title>
   </head>
-  <body style="padding: 20px; margin: 10px ;">
-    <main>
-      <h1
-        style="font-family: Courgette; font-size: 32px; width: 200px; text-decoration-line: underline; text-decoration-color: yellow"
-      >
-        <i>Naki's Finder<i>
-      </h1>
-      <form>
-        <input type="text" id="text-to-search" style="box-sizing: border-box; width: 94vw;border: 2px solid black; padding: 5px;" value="New" /><br /><br />
-        <input
-          type="submit"
-          style="
-            background-color: black;
-            color: white;
-            border-radius: 10;
-            padding: 8px;
-            width: 200px;
-            font-size: medium;
-          "
-          value="Clear search"
-        />
-      </form>
-      
-      
-<div style="overflow-x:auto;"">
+  <body class="main-container">
+    <h1 class="logo-header"><i>Naki's Finder</i></h1>
+
+    <form class="search-form">
+      <input
+        class="search"
+        type="text"
+        id="text-to-search"
+        value="New"
+      /><br /><br />
+
+      <input class="search-button" type="submit" value="Clear search" />
+    </form>
+
+    <div style="overflow-x: auto">
       <table>
         <thead>
           <th scope="col">City</th>
@@ -39,19 +28,18 @@
           <th scope="col">Growth</th>
         </thead>
         <tr>
-          <td> NewYork</td>
-          <td> Brooklyn</td>
-          <td> 2 million</td>
-          <td> 2%</td>
+          <td>NewYork</td>
+          <td>Brooklyn</td>
+          <td>2 million</td>
+          <td>2%</td>
         </tr>
         <tr>
-          <td> NewYork</td>
-          <td> Brooklyn</td>
-          <td> 2 million</td>
-          <td> 2%</td>
+          <td>NewYork</td>
+          <td>Brooklyn</td>
+          <td>2 million</td>
+          <td>2%</td>
         </tr>
       </table>
-      </div>
-    </main>
+    </div>
   </body>
 </html>
