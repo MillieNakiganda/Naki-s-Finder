@@ -1,11 +1,11 @@
 .main-container{
   display: grid; 
-  grid-template-columns: 2% min(120ch, calc(100% - 64px));
-  grid-column-gap: 32px
+  grid-template-columns: repeat(6,1fr);
+  grid-column-gap: 32px;
 }
 
-.main-container > * {
-  grid-column: 2;
+body > *  {
+  grid-column: 2/6;
 }
 
 input[value="New"]{
@@ -35,7 +35,7 @@ th, td {
 }
 
 .search{
-  width: 100%; 
+  
   border: 2px solid black;
 }
 
@@ -44,6 +44,12 @@ th, td {
   color: white;
   border-radius: 10;
   font-size: medium;
+  width: 200px;
+}
+.search-form{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 
