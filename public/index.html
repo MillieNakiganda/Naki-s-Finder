@@ -5,47 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Naki's Finder</title>
   </head>
-  <body class="main-container">
-    <h1 class="logo-header"><i>Naki's Finder</i></h1>
+  <body>
+    <section class="header">
+      <h1 class="header__h1">Naki's Finder</h1>
+    </section>
 
-    <form class="search-form">
-      <input
-        style="flex: 2"
-        class="search"
-        type="text"
-        id="text-to-search"
-        value="New"
-      />
-
-      <input
-        class="search-button"
-        type="submit"
-        id="search-btn"
-        value="Clear search"
-      />
-    </form>
-
-    <div style="overflow-x: auto">
-      <table>
-        <thead>
-          <th scope="col">City</th>
-          <th scope="col">State</th>
-          <th scope="col">Population</th>
-          <th scope="col">Growth</th>
-        </thead>
-        <tr>
-          <td>NewYork</td>
-          <td>Brooklyn</td>
-          <td>2 million</td>
-          <td>2%</td>
-        </tr>
-        <tr>
-          <td>NewYork</td>
-          <td>Brooklyn</td>
-          <td>2 million</td>
-          <td>2%</td>
-        </tr>
-      </table>
-    </div>
+    <section class="form">
+      <form class="form__form">
+        <input
+          class="form__input form__input--query"
+          type="text"
+          id="text-to-search"
+          value="New"
+        />
+        <input
+          class="form__input form__input--submit"
+          type="submit"
+          id="search-btn"
+          value="Clear search"
+        />
+      </form>
+    </section>
   </body>
 </html>
