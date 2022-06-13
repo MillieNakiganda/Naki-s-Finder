@@ -28,8 +28,27 @@ th, td {
         display:grid;
         grid-template-columns: 1fr;
         margin-top: 5px; 
+    } 
+    .header{
+      display: grid;
+      grid-template-columns: 1fr;
+      
     }
-    
+    .header__h1 {
+      grid-column: 1;
+    }
+    .form__form{
+      display: grid;
+      grid-template-columns: 1fr;
+      column-gap: 32px;
+      row-gap: 5px;
+    } 
+    .form__input--query{
+      grid-column: 1;
+    }
+    .form__input--submit{  
+    grid-column: 1;
+  }
     table {
         border: 0;
       }
