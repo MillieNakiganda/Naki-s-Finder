@@ -1,14 +1,12 @@
 .header{
   display: grid;
-  grid-template-columns: repeat(6,1fr);
-  
+  grid-template-columns: repeat(6,1fr); 
 }
+
 .header__h1 {
-    font-family: Courgette; 
-  font-size: 32px;
-  width: 200px;
+  font-family: Playball; 
+  font-size: 2rem;
   text-decoration-line: underline; 
-  text-decoration-color: yellow;
-  font-style: italics;
+  text-decoration-color: yellow; 
   grid-column: 2/6;
 }

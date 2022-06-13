@@ -1,20 +1,29 @@
-.form__form{
+.form{
     display: grid;
     grid-template-columns: repeat(6,1fr);
-    column-gap: 32px;
+    box-sizing:content-box;
     row-gap: 5px;
 } 
+
+.form__form {
+    grid-column: 2/6; 
+}
+
 .form__input--query{
     font: 1vw;
     font-weight: bold;
     border: 2px solid black;
     grid-column: 2/6;
+    display: block;
+    margin-bottom: 5PX;
+    min-inline-size: 98%; 
 }
+
 .form__input--submit{
     background-color: black;
-  color: white;
-  border-radius: 10;
-  font-size: medium;
-  width: 200px;
-  grid-column: 2/3;
+    color: white;
+    border-radius: 10;
+    font-size: medium;
+    width: 200px;
+    grid-column: 2/3;
 }
