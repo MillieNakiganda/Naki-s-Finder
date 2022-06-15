@@ -20,6 +20,8 @@
     margin-bottom: 10px;
     min-inline-size: 98%; 
     height: 35%;
+    box-sizing: content-box;
+    padding-left: 2%;
 
 }
 
