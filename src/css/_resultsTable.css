@@ -7,21 +7,35 @@
 .resultsTable__table{
     table-layout: fixed;
     width: 100%;
+    border-collapse: collapse;
+    row-gap: 10px;
 }
 
 .resultsTable__table{
     grid-column: 2/6;
 } 
 
-tr:nth-child(even), thead {background-color: #f2f2f2;}
+.resultsTable__thead{
+  font-family: Lato,sans-serif;
+  font-style: bold;
+  
+}
+
+tr:nth-child(odd) {background-color: #f2f2f2;}
+
+th{
+  background-color: white;
+}
 
 th, td {
   text-align: center;
   font-style: normal;
-  font-family: Inter;
+  font-family: Lato,sans-serif;
   padding: .625em;
   font-size: 1rem;
+
 }
+
 
 @media screen and (max-width: 600px) {
     .resultsTable{
@@ -89,6 +103,7 @@ th, td {
         display: block;
         font-size: .8em;
         text-align: right;
+        
       }
       
       .resultsTable__table td::before {
