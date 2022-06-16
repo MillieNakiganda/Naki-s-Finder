@@ -5,6 +5,7 @@
     row-gap: 5px;
     margin-bottom: 25px;
     margin-top: 25PX;
+
 } 
 
 .form__form {
@@ -12,13 +13,11 @@
 }
 
 .form__input--query{
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 5px 10px;
+    font-weight: 600;
     grid-column: 2/6;
     padding: 0.5%;
     margin-bottom: 10px;
-    min-inline-size: 98%; 
+    min-width: 98%; 
     height: 35%;
     box-sizing: content-box;
     padding-left: 2%;
@@ -28,11 +27,9 @@
 .form__input--submit{
     background-color: black;
     color: white;
-    font-size: medium;
     border-radius: 0px;
-    max-inline-size: 50%;
     grid-column: 2/3;
-    padding: .5rem 2rem;
+    padding: 10px 10px;
     margin-top: 2px;
     text-align: center;
     font-weight: 600;
