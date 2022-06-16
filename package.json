@@ -23,8 +23,12 @@
     "eslint-loader": "^4.0.2",
     "eslint-plugin-import": "^2.24.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react-hooks": "^4.5.0",
     "html-webpack-plugin": "^5.5.0",
+    "husky": "^8.0.1",
     "install-peerdeps": "^3.0.3",
+    "lint-staged": "^12.4.2",
     "mini-css-extract-plugin": "^2.6.0",
     "prettier": "^2.6.2",
     "style-loader": "^3.3.1",
@@ -35,5 +39,15 @@
   },
   "dependencies": {
     "http-server": "^14.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "rules": {
+    "linebreak-style": ["error", "windows"]
+
   }
+  
 }
