@@ -4,9 +4,9 @@
 }
 
 .header__h1 {
-  font-family: Playball; 
+  font-family: var(--header-font-family); 
   font-size: 3rem;
   text-decoration-line: underline; 
-  text-decoration-color: yellow; 
+  text-decoration-color: var(--color_darkyellow); 
   grid-column: 2/6;
 }

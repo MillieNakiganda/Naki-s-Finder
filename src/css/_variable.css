@@ -1,0 +1,12 @@
+:root{
+    /*typography*/
+    --table-font-family: Lato,sans-serif; 
+    --header-font-family: 'Playball',cursive;  
+
+    /*colors*/
+    --color_black: #000000;
+    --color_white: #ffffff;
+    --color_gray: #f2f2f2;
+    --color_lightGray: #dddddd;
+    --color_darkyellow: #f3be26;
+}

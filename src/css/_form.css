@@ -15,18 +15,17 @@
 .form__input--query{
     font-weight: 600;
     grid-column: 2/6;
-    padding: 0.5%;
     margin-bottom: 10px;
     min-width: 98%; 
     height: 35%;
     box-sizing: content-box;
     padding-left: 2%;
-
+    border-radius: 0px;
 }
 
 .form__input--submit{
-    background-color: black;
-    color: white;
+    background-color: var(--color_black);
+    color: var(--color_white);
     border-radius: 0px;
     grid-column: 2/3;
     padding: 10px 10px;
@@ -41,4 +40,9 @@
 
 .form__input--submit:active{
     transform: translateY(4px);  
+  }
+
+.form__input--query:focus{
+    border: 2px solid var(--color_darkyellow);
+    border-radius: 2px;
   }
