@@ -43,6 +43,7 @@
   }
 
 .form__input--query:focus{
+    outline: none !important;
     border: 2px solid var(--color_darkyellow);
     border-radius: 2px;
   }
