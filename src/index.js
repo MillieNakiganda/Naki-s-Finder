@@ -6,5 +6,4 @@ import './js/search';
 import './js/cities';
 
 // json files
-
-import './json/cities.json';
+import './cities.json';

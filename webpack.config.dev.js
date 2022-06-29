@@ -30,19 +30,6 @@ module.exports = {
         exclude: /node_modules/,
         use: ['babel-loader', 'eslint-loader'],
       },
-      {
-        type: 'javascript/auto',
-        test: /\.json$/,
-        use: [
-          {
-            loader: 'file-loader',
-            include: [path.resolve(__dirname, 'json')],
-            options: {
-              name: '[name].[ext]',
-            },
-          },
-        ],
-      },
     ],
   },
   plugins: [
