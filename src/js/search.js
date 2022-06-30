@@ -48,8 +48,9 @@ const getData = () => {
 };
 
 const clearTable = () => {
-  document.getElementById('table_Cities').innerHTML = '';
+  document.getElementById('table_Cities').style.visibility = 'hidden';
   document.getElementById('text-to-search').value = '';
+  document.getElementById('search-btn').style.visibility = 'hidden';
   return false;
 };
 
