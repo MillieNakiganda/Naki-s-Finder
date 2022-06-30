@@ -4,10 +4,10 @@ import { obj } from './cities';
 
 const submitBtn = document.getElementById('search-btn');
 const input = document.querySelector('input');
-function returnMarkedCityState(datavalue, inputText) {
+const returnMarkedCityState = (datavalue, inputText) => {
   const regex = new RegExp(`(${inputText})`, 'gi');
   return datavalue.replace(regex, "<span style='background-color: #FFFF00'>$1</span>");
-}
+};
 
 const getData = () => {
   const inputText = document.getElementById('text-to-search').value;
@@ -42,10 +42,10 @@ const getData = () => {
   return false;
 };
 
-function clearTable() {
+const clearTable = () => {
   document.getElementById('table_Cities').innerHTML = '';
   return false;
-}
+};
 
 input.addEventListener('input', getData);
 submitBtn.onclick = clearTable;
