@@ -1,88 +1,51 @@
-/* eslint-disable */
-
+/* eslint-disable quotes */
+/* eslint-disable-next-line quotes */
 import { obj } from './cities';
 
-const submit_btn = document.getElementById('search-btn');
+const submitBtn = document.getElementById('search-btn');
 const input = document.querySelector('input');
-input.addEventListener('input', getData);
-submit_btn.onclick = getData;
+function returnMarkedCityState(datavalue, inputText) {
+  const regex = new RegExp(`(${inputText})`, 'gi');
+  return datavalue.replace(regex, "<span style='background-color: #FFFF00'>$1</span>");
+}
 
+const getData = () => {
+  const inputText = document.getElementById('text-to-search').value;
 
-async function getData() {
+  if (inputText !== '') {
+    const regex = new RegExp(inputText, 'ig');
 
-  const input_text = document.getElementById('text-to-search').value;
-  if (input_text !== '') {
-    const regex = new RegExp(input_text, "ig");
-    var temp = "";
-    obj.forEach(data => {
+    let tableRow = ``;
+
+    obj.forEach((data) => {
       if ((data.city).match(regex) || (data.state).match(regex)) {
+        tableRow += `<tr>`;
 
+        tableRow += `<td data-label='City'> ${returnMarkedCityState(data.city, inputText)}</td>`;
+        tableRow += `<td data-label='State'> ${returnMarkedCityState(data.state, inputText)} </td>`;
+        tableRow += `<td data-label='Population'> ${data.population} </td>`;
 
-
-        temp += "<tr>";
-
-        temp += "<td data-label='City'>" + data.city + "</td>";
-        temp += "<td data-label='State'>" + data.state + "</td>";
-        temp += "<td data-label='Population'>" + data.population + "</td>";
-
-        (parseInt(data.growth_from_2000_to_2013) > 0) ?
-          temp += "<td data-label='Growth' style='color:green;'>" + data.growth_from_2000_to_2013 + "</td>" :
-          temp += "<td data-label='Growth' style='color:red;'>" + data.growth_from_2000_to_2013 + "</td>";
-
-
+        // eslint-disable-next-line no-unused-expressions
+        (parseInt(data.growth_from_2000_to_2013, 10) > 0)
+          ? tableRow += `<td data-label='Growth' style='color:green;'> ${data.growth_from_2000_to_2013} </td>`
+          : tableRow += `<td data-label='Growth' style='color:red;'> ${data.growth_from_2000_to_2013} </td>`;
       }
     });
-    document.getElementById("tableBody").innerHTML = temp;
-    document.getElementById("table_Cities").style.visibility = 'visible';
-    document.getElementById("search-btn").style.visibility = 'visible';
-
-
-    //Highlight keyword
-    let table, tr, td, txtValue;
-
-    table = document.getElementById("table_Cities");
-    tr = table.getElementsByTagName("tr");
-
-
-    // Loop through all table rows, and hide those who don't match the search query
-    for (let i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td");
-      for (let j = 0; j < td.length; j++) {
-
-        txtValue = td[j].textContent;
-
-        let count = (txtValue.match(regex) || []).length;
-        if (count !== 0) {
-
-          td[j].innerText = '';
-          let strArray = txtValue.split(input_text);
-          let loopLength = strArray.length - 1;
-
-          for (let i = 0; i < loopLength; i++) {
-            createTagAndAppendTo('span', strArray[i], td[j]);
-            createTagAndAppendTo('mark', input_text, td[j]);
-          }
-
-          createTagAndAppendTo('span', strArray[loopLength], td[j]);
-
-        }
-      }
-    }
-
-
-  }
-  else {
-    document.getElementById("table_Cities").style.visibility = 'hidden';
-    document.getElementById("search-btn").style.visibility = 'hidden';
+    document.getElementById('tableBody').innerHTML = tableRow;
+    document.getElementById('table_Cities').style.visibility = 'visible';
+    document.getElementById('search-btn').style.visibility = 'visible';
+  } else {
+    document.getElementById('table_Cities').style.visibility = 'hidden';
+    document.getElementById('search-btn').style.visibility = 'hidden';
   }
 
   return false;
+};
 
+function clearTable() {
+  document.getElementById('table_Cities').innerHTML = '';
+  return false;
 }
 
-function createTagAndAppendTo(tag, txt, elem) {
-  let customTag = document.createElement(tag);
-  customTag.textContent = txt;
-  elem.append(customTag);
-}
-
+input.addEventListener('input', getData);
+submitBtn.onclick = clearTable;
