@@ -20,4 +20,4 @@ The client app requires Node.js 10.0+. Checkout the [docs](https://nodejs.org/en
 
 #### Wire Frame
 
-![Naki's Finder Wireframe](../assets/Naki's_Finder.png)
+![Naki's Finder Wireframe](src/assets/Naki's_Finder.png)
