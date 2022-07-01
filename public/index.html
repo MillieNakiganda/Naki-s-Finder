@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Naki's Finder</title>
   </head>
   <body>
@@ -11,7 +12,7 @@
     </header>
 
     <section class="form">
-      <form class="form__form">
+      <form action="#" class="form__form">
         <input
           class="form__input form__input--query"
           type="text"
@@ -22,31 +23,25 @@
           class="form__input form__input--submit"
           type="submit"
           id="search-btn"
+          style="visibility: hidden"
           value="Clear Search"
         />
       </form>
     </section>
 
     <section class="resultsTable">
-      <table class="resultsTable__table">
+      <table
+        id="table_Cities"
+        style="visibility: hidden"
+        class="resultsTable__table"
+      >
         <thead class="resultsTable__thead">
           <th scope="col">City</th>
           <th scope="col">State</th>
           <th scope="col">Population</th>
           <th scope="col">Growth</th>
         </thead>
-        <tr>
-          <td data-label="City">NewYork</td>
-          <td data-label="State">Brooklyn</td>
-          <td data-label="Population">2 million</td>
-          <td data-label="Growth">2%</td>
-        </tr>
-        <tr>
-          <td data-label="City">NewYork</td>
-          <td data-label="State">Brooklyn</td>
-          <td data-label="Population">2 million</td>
-          <td data-label="Growth">2%</td>
-        </tr>
+        <tbody id="tableBody"></tbody>
       </table>
     </section>
   </body>
