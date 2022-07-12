@@ -2,8 +2,10 @@
 import './css/index.css';
 
 // Js files
-import './js/search';
+// import './js/search';
 import './js/cities';
+import React from 'react';
+import * as ReactDOM from 'react-dom';
+import App from './App';
 
-// json files
-import './cities.json';
+ReactDOM.render(<App />, document.getElementById('app'));
