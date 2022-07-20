@@ -11,7 +11,7 @@ The client app requires Node.js 10.0+. Checkout the [docs](https://nodejs.org/en
 
 #### Installation guidelines
 
-- Clone the repo
+- Clone the repository
 - On your command line, switch to the app root directory
 - Install dependencies using `yarn install`
 - Run development server using `yarn start:dev`
