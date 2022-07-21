@@ -6,14 +6,6 @@ import { obj } from '../js/cities';
 const Form = (props) => {
   const [inputText, setInputText] = useState('');
 
-  // eslint-disable-next-line no-unused-vars
-  const returnMarkedCityState = (datavalue) => {
-    const trailspac = inputText.trim();
-    const cleanSpaces = trailspac.replace(/\s+/g, ' ');
-    const regex = new RegExp(`(${cleanSpaces})`, 'gi');
-    return datavalue.replace(regex, "<span style='background-color: #FFFF00'>$1</span>");
-  };
-
   const updateValue = (event) => {
     event.preventDefault();
     setInputText(event.target.value);
