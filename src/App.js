@@ -12,8 +12,8 @@ const App = () => {
 
   const updateTable = (citiesData, inputValue) => {
     setButtonTableState(false);
-    setCitiesObj(citiesData);
     setInputText(inputValue);
+    setCitiesObj(citiesData);
   };
 
   return (<>

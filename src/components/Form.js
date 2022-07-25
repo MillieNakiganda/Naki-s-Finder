@@ -1,5 +1,6 @@
 /* eslint-disable array-callback-return */
 /* eslint-disable react/prop-types */
+/* eslint-disable */
 import React, { useState } from 'react';
 import { obj } from '../js/cities';
 
@@ -9,10 +10,13 @@ const Form = (props) => {
   const updateValue = (event) => {
     event.preventDefault();
     setInputText(event.target.value);
+    const y = inputText;
+    const hy = event.target.value;
+    debugger;
 
-    if (inputText !== '') {
+    if (event.target.value !== '') {
       const selectedCities = [];
-      const trailspac = inputText.trim();
+      const trailspac = event.target.value.trim();
       const cleanSpaces = trailspac.replace(/\s+/g, ' ');
       const regex = new RegExp(cleanSpaces, 'ig');
       obj.forEach((data) => {
@@ -21,14 +25,14 @@ const Form = (props) => {
         }
       });
 
-      props.onChange(selectedCities, event.target.value);
+      props.onChange(selectedCities, event.target.value.trim());
     }
   };
 
   const handlesubmit = (event) => {
     event.preventDefault();
     setInputText('');
-    props.onChange([], inputText);
+    props.onChange([], inputText.trim());
   };
   return (
     <section className="form">
