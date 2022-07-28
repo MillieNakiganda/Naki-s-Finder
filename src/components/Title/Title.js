@@ -1,9 +1,11 @@
 import React from 'react';
+import './Title.css';
 
-const Title = () => (
+// eslint-disable-next-line react/prop-types
+const Title = ({ children }) => (
       <header className="header">
         <h1 className="header__h1">
-          Naki&apos;s Finder
+            { children }
         </h1>
       </header>
 );
