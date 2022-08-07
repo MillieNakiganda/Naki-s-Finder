@@ -12,7 +12,9 @@ const App = () => {
   const updateTable = useCallback((citiesData, inputValue) => {
     citiesData.length === 0 ? setTableState(false) : setTableState(true);
     setInputText(inputValue);
-    setCitiesObj(citiesData);
+    citiesData.length === 0
+      ? setCitiesObj(citiesData.splice(0, citiesData.length))
+      : setCitiesObj(citiesData);
   }, [inputText, citiesObj]);
 
   return (

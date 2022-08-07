@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
-import React, { useEffect, useState, useRef } from 'react';
+import React, {
+  useEffect, useState, useRef,
+} from 'react';
 import { PropTypes } from 'prop-types';
 import './Form.css';
 import { obj } from '../../js/cities';
@@ -28,7 +30,7 @@ const Form = (props) => {
 
   useEffect(() => {
     const selectedCities = [];
-    if (inputText !== '') {
+    if (inputText.trim() !== '') {
       const trailspac = inputText.trim();
       const cleanSpaces = trailspac.replace(/\s+/g, ' ');
       const regex = new RegExp(cleanSpaces, 'ig');
