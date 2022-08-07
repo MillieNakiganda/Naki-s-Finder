@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import './TableRow.css';
 import { PropTypes } from 'prop-types';
@@ -9,7 +8,7 @@ const returnMarkedCityState = (text, inputval) => {
   return <span >{parts.map((part) => (part.toLowerCase() === inputval.toLowerCase()
     ? <span style={{ backgroundColor: 'yellow' }}>{part}</span> : part))}</span>;
 };
-// eslint-disable-next-line react/prop-types
+
 const TableRow = (props) => (
     <>
        <tr>
@@ -38,4 +37,4 @@ TableRow.propTypes = {
   growth_from_2000_to_2013: PropTypes.string,
 };
 
-export default TableRow;
+export default React.memo(TableRow);

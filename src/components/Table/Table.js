@@ -6,6 +6,7 @@ import TableRow from '../TableRow/TableRow';
 const Table = (props) => (
     <section className="resultsTable">
       <table
+      style={{ visibility: props.statebutton === true ? 'visible' : 'hidden' }}
         id="table_Cities"
         className="resultsTable__table">
 
@@ -18,7 +19,7 @@ const Table = (props) => (
             </tr>
         </thead>
       <tbody id="tableBody">
-           { props.cities.map((profile) => <TableRow key= {profile.rank}
+      {props.cities.map((profile) => <TableRow key= {profile.rank}
            {...profile} inputval = {props.inputval} />)}
         </tbody>
         </table>
@@ -28,6 +29,7 @@ const Table = (props) => (
 Table.propTypes = {
   cities: PropTypes.array,
   inputval: PropTypes.string,
+  statebutton: PropTypes.bool,
 };
 
-export default Table;
+export default React.memo(Table);

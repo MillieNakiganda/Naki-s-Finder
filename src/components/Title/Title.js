@@ -10,4 +10,4 @@ const Title = ({ children }) => (
       </header>
 );
 
-export default Title;
+export default React.memo(Title);

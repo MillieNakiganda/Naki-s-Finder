@@ -6,7 +6,7 @@ export default {
   component: TableRow,
 };
 
-const Template = (args) => <TableRow {...args} />;
+const Template = (args) => <TableRow statebutton={true} {...args} />;
 
 // eslint-disable-next-line import/prefer-default-export
 export const Primary = Template.bind({});
