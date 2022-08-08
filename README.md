@@ -3,6 +3,7 @@
 </div>
 
 <p>A client app for searching US cities by city or state.</p>
+<p>The app comprises of 4 components as seen on <a href='https://visionary-gnome-35f42a.netlify.app/'>storybook</a>
 <p>Check it out</p><a href='https://stalwart-gaufre-57e664.netlify.app/'> Naki's Finder</a>
 
 ## Getting started
