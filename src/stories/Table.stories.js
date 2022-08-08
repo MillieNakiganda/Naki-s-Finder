@@ -32,4 +32,5 @@ SampleTable.args = {
     },
   ],
   inputval: 'Ne',
+  statebutton: true,
 };
