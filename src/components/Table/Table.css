@@ -1,3 +1,4 @@
+@import "../../css/index.css";
 .resultsTable{
     display:grid;
     grid-template-columns: repeat(6,1fr);
